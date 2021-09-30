@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery slider</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-3.6.0.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<div class="header">
+		<h1>Lorem Ipsum</h1>
+	</div>
+	<h1>&nbsp</h1>
+	<div class="container">
+		<img src="ressources/banner2.png" id="img1">
+		<img src="ressources/banner.png" id="img2">
+	</div>
+	<script type="text/javascript">
+		$("#img1").show();
+		$("#img2").hide();
+		function showImg1(){
+			$("#img1").show();
+			$("#img2").hide();
+			setTimeout(showImg2, 5000);
+		}
+		function showImg2(){
+			$("#img1").hide();
+			$("#img2").show();
+			setTimeout(showImg1, 5000);
+		}
+		showImg1();
+	</script>
+</body>
+</html>
